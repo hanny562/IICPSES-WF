@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -13,7 +14,7 @@ namespace IICPSES
         /// <returns></returns>
         public static string GetConnectionString()
         {
-            return "";
+            return ConfigurationManager.ConnectionStrings["IICPSES"].ConnectionString;
         }
     }
 }
