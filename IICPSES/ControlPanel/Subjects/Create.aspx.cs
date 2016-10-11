@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace IICPSES.ControlPanel.Subjects
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Create : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,14 +19,22 @@ namespace IICPSES.ControlPanel.Subjects
             HtmlControl hc = hyperlink.Parent as HtmlControl;
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
-
-            BindGridView_Subjects();
         }
 
-        private void BindGridView_Subjects()
+        protected void btnCreateSubject_Click(object sender, EventArgs e)
         {
-            gvSubjects.DataSource = Subject.GetAllSubjects();
-            gvSubjects.DataBind();
+            if(!(string.IsNullOrWhiteSpace(txtSubjectCode.Text) && string.IsNullOrWhiteSpace(txtSubjectName.Text)))
+            {
+                try
+                {
+                    Subject.AddSubject(txtSubjectName.Text, txtSubjectCode.Text);
+                    lblStatus_CreateSubject.Text = "Subject successfully created!";
+                }
+                catch(Exception ex)
+                {
+                    lblStatus_CreateSubject.Text = ex.ToString();
+                }
+            }
         }
     }
 }

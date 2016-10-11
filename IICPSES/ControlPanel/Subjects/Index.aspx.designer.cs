@@ -13,21 +13,12 @@ namespace IICPSES.ControlPanel.Subjects {
     public partial class Index {
         
         /// <summary>
-        /// lbSubjectIndex control.
+        /// gvSubjects control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSubjectIndex;
-        
-        /// <summary>
-        /// btnCreateSubject control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateSubject;
+        protected global::System.Web.UI.WebControls.GridView gvSubjects;
     }
 }
