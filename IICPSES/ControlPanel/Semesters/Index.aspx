@@ -3,13 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
     <h2><asp:Label runat="server" CssClass="page page-header" Text="Semester Index"></asp:Label></h2>
-    <a href="Create.aspx" class="btn btn-primary">Create Semester</a>
+    
 
     <h3>List of Semesters</h3>
+    <a href="Create.aspx" class="btn btn-primary">Create Semester</a>
     <asp:GridView runat="server" ID="gvSemesters" CssClass="table table-bordered"
         EmptyDataText="There are no semesters info at this time being."></asp:GridView>
 
     <h3>List of Association of Semester Subjects</h3>
+    <a href="Manage/Subject.aspx" class="btn btn-primary">Create Association</a>
     <asp:GridView runat="server" ID="gvSemesterSubjects" CssClass="table table-bordered"
         EmptyDataText="There are no semester subjects association info at this time being."></asp:GridView>
 </asp:Content>
