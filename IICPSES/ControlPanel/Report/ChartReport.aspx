@@ -32,7 +32,7 @@
 				</div>
 				<form runat="server">
 					<asp:Button ID="btnExport" CssClass="btn btn-primary" runat="server" Text="Export" />&nbsp;
-					<asp:Button ID="btnPrint" CssClass="btn btn-primary" runat="server" Text="Print" />
+					<asp:Button ID="btnPrint" CssClass="btn btn-primary" runat="server" Text="Print" OnClientClick="javascript:PrintPage();" />
 				</form>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 				{
 					fillColor: "rgba(151,249,190,0.5)",
 					strokeColor: "rgba(255,255,255,1)",
-					data: [13, 20, 30, 40, 50]
+					data: [1, 2, 3, 4, 5]
 				}
 			]
 
@@ -53,6 +53,11 @@
 		var myBarChart = new Chart(document.getElementById("canvas").getContext("2d")).Bar(BarChart, { scaleFontSize: 13, scaleFontColor: "#ffa45e" });
 
 	</script>
+	 <script type="text/javascript">
+	function PrintPage() {
+		window.print();
+	}
+</script>
 </body>
 </html>
 
