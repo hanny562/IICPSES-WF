@@ -32,7 +32,7 @@
         <script src="Assets/js/bootstrap.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <div class="container body-content">
+        <div id="footer" class="container body-content">
             <hr />
             <footer>
                 <p>&copy; <%= DateTime.Now.Year %> INTI International College Penang Student Evaluation System</p>

@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="container body-content">
+    <div id="footer" class="container body-content">
         <hr />
         <footer>
             <p>&nbsp;&copy; <%= DateTime.Now.Year %> INTI International College Penang Student Evaluation System</p>
