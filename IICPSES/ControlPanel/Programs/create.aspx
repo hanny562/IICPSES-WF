@@ -14,7 +14,7 @@
             <asp:TextBox runat="server" ID="txtProgramCode" CssClass="form-control" placeholder="Program Code" required="required" autofocus="autofocus" />
 
             <asp:Label Text="School" runat="server" CssClass="label label-info" />
-            <asp:DropDownList runat="server" ID="ddlSchools"></asp:DropDownList>
+            <asp:DropDownList runat="server" ID="ddlSchools" CssClass="form-control"></asp:DropDownList>
 
             <p><asp:Label runat="server" ID="lblStatus_CreateProgram" /></p>
 
