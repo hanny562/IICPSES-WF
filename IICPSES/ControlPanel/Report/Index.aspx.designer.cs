@@ -13,22 +13,40 @@ namespace IICPSES.ControlPanel.Report {
     public partial class Index {
         
         /// <summary>
-        /// lbProgram control.
+        /// lbProgramReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbProgram;
+        protected global::System.Web.UI.WebControls.Label lbProgramReport;
         
         /// <summary>
-        /// lbSubject control.
+        /// ddlProgramReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSubject;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProgramReport;
+        
+        /// <summary>
+        /// lbSubjectReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbSubjectReport;
+        
+        /// <summary>
+        /// ddlSubjectReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSubjectReport;
         
         /// <summary>
         /// lbSemester control.
@@ -40,30 +58,12 @@ namespace IICPSES.ControlPanel.Report {
         protected global::System.Web.UI.WebControls.Label lbSemester;
         
         /// <summary>
-        /// lbLecturerName control.
+        /// ddlSemesterReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbLecturerName;
-        
-        /// <summary>
-        /// lbFeedback control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbFeedback;
-        
-        /// <summary>
-        /// btnExport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExport;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSemesterReport;
     }
 }
