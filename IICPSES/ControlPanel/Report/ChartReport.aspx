@@ -31,8 +31,8 @@
 					<br />
 				</div>
 				<form runat="server">
-					<asp:Button ID="btnExport" runat="server" Text="Export" />
-					<asp:Button ID="btnPrint" runat="server" Text="Print" />
+					<asp:Button ID="btnExport" CssClass="btn btn-primary" runat="server" Text="Export" />&nbsp;
+					<asp:Button ID="btnPrint" CssClass="btn btn-primary" runat="server" Text="Print" />
 				</form>
 			</div>
 		</div>

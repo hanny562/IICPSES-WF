@@ -28,8 +28,8 @@
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
             </div><br/>
-            <div class="">
-                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
+            <div>
+                <asp:Button ID="btnConfirm" CssClass="btn btn-default" runat="server" Text="Create" OnClick="btnConfirm_Click" />
             </div>
         </div>
     </body>

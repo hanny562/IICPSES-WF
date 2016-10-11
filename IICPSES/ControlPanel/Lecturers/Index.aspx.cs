@@ -20,5 +20,10 @@ namespace IICPSES.ControlPanel.Lecturers
             hc.Attributes.Add("class", "active");
             
         }
+
+        protected void btnCreateLecturer_Click(object sender, EventArgs eventArgs)
+        {
+            Response.Redirect("Create.aspx");
+        }
     }
 }

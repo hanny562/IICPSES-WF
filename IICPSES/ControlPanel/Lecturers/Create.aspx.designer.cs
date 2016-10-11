@@ -13,6 +13,15 @@ namespace IICPSES.ControlPanel.Lecturers {
     public partial class Create {
         
         /// <summary>
+        /// lbLecturerTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbLecturerTitle;
+        
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace IICPSES.ControlPanel.Lecturers {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName;
+        
+        /// <summary>
+        /// txtID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtID;
         
         /// <summary>
         /// lblStatus_CreateLecturer control.
