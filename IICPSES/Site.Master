@@ -27,7 +27,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Nav_Overview" Text="Dashboard" /></li>
+                    <li>
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Nav_Overview" Text="Dashboard" /></li>
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Help</a></li>
@@ -40,15 +41,22 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Index" Text="Overview" /></li>
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Schools/" runat="server" ID="lnkCP_Schools" Text="Schools" /></li>
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Lecturers/" runat="server" ID="lnkCP_Lecturers" Text="Lecturers" /></li>
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Programs/" runat="server" ID="lnkCP_Programs" Text="Programs" /></li>
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/" runat="server" ID="lnkCP_Semesters" Text="Semesters" /></li>
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Subjects/" runat="server" ID="lnkCP_Subjects" Text="Subjects" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Index" Text="Overview" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Schools/" runat="server" ID="lnkCP_Schools" Text="Schools" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Lecturers/" runat="server" ID="lnkCP_Lecturers" Text="Lecturers" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Programs/" runat="server" ID="lnkCP_Programs" Text="Programs" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/" runat="server" ID="lnkCP_Semesters" Text="Semesters" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Subjects/" runat="server" ID="lnkCP_Subjects" Text="Subjects" /></li>
                 </ul>
                 <ul class="nav nav-sidebar">
-                    <li runat="server"><asp:HyperLink NavigateUrl="~/ControlPanel/Surveys/" runat="server" ID="lnkCP_Surveys" Text="Surveys" /></li>
+                    <li runat="server">
+                        <asp:HyperLink NavigateUrl="~/ControlPanel/Surveys/" runat="server" ID="lnkCP_Surveys" Text="Surveys" /></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li>

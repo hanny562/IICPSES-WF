@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <div style="text-align: center;" ><img src="Src/Images/14483968_297803533934965_1461414969_n.png" /></div>
 </head>
 <body>
     <form id="frmSurvey" runat="server">
@@ -27,3 +29,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+

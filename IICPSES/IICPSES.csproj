@@ -141,6 +141,7 @@
     <Content Include="Index.aspx" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="Src\Images\14483968_297803533934965_1461414969_n.png" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
