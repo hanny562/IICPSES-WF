@@ -3,8 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
  <header>
-        <h2>
-                <asp:Label ID="lbSubjectIndex" runat="server" CssClass="page page-header" Text="Subject Index"></asp:Label></h2>
+        <h2><asp:Label ID="lbSubjectIndex" runat="server" CssClass="page page-header" Text="Subject Index"></asp:Label></h2>
     </header>
     <body>
     <br/>

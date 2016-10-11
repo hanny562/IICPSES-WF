@@ -13,21 +13,12 @@ namespace IICPSES.ControlPanel.Semesters {
     public partial class Index {
         
         /// <summary>
-        /// lbSemIndex control.
+        /// gvSemesters control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSemIndex;
-        
-        /// <summary>
-        /// btnSemLecturer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSemLecturer;
+        protected global::System.Web.UI.WebControls.GridView gvSemesters;
     }
 }
