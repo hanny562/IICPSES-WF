@@ -130,7 +130,7 @@
     <Content Include="ControlPanel\Index.aspx" />
     <Content Include="ControlPanel\Lecturers\Create.aspx" />
     <Content Include="ControlPanel\Lecturers\Index.aspx" />
-    <Content Include="ControlPanel\Programs\create.aspx" />
+    <Content Include="ControlPanel\Programs\Create.aspx" />
     <Content Include="ControlPanel\Programs\Index.aspx" />
     <Content Include="ControlPanel\Report\ChartReport.aspx" />
     <Content Include="ControlPanel\Report\Index.aspx" />
@@ -170,12 +170,12 @@
     <Compile Include="ControlPanel\Lecturers\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ControlPanel\Programs\create.aspx.cs">
-      <DependentUpon>create.aspx</DependentUpon>
+    <Compile Include="ControlPanel\Programs\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ControlPanel\Programs\create.aspx.designer.cs">
-      <DependentUpon>create.aspx</DependentUpon>
+    <Compile Include="ControlPanel\Programs\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlPanel\Programs\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -245,6 +245,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role\Lecturer.cs" />
+    <Compile Include="Role\Program.cs" />
+    <Compile Include="Role\School.cs" />
     <Compile Include="Shared.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

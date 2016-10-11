@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,10 @@ namespace IICPSES.Role
 {
     public class Lecturer
     {
+        /// <summary>
+        ///     Adds the lecturer
+        /// </summary>
+        /// <param name="name"></param>
         public static void AddLecturer(string name)
         {
             // Creates a SqlConnection object to connect to SQL Server
@@ -28,6 +33,24 @@ namespace IICPSES.Role
 
                     // finally, execute the query
                     cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static DataSet GetAllLecturers()
+        {
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand("select * from [dbo].Lecturer", conn))
+                {
+                    var da = new SqlDataAdapter(cmd);
+                    var ds = new DataSet();
+
+                    da.Fill(ds);
+
+                    return ds;
                 }
             }
         }

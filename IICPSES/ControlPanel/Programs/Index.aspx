@@ -2,17 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
-    <header>
-        <h2>
-                <asp:Label ID="lbProgramIndex" runat="server" CssClass="page page-header" Text="Program Index"></asp:Label></h2>
-    </header>
-    <body>
-    <br/>
-    <div>
-        <asp:Button ID="btnCreateProgram" CssClass="btn btn-primary" runat="server" Text="New Program" />  
-    </div>
-    <div>
-        <h3>List of Programs</h3>
-    </div>
-    </body>
+
+    <h2>Program Index</h2>
+    <a href="Create.aspx" class="btn btn-primary">Create Program</a>
+
+    <h3>List of Programs</h3>
+    <asp:GridView runat="server" ID="gvPrograms" 
+        EmptyDataText="There are no programs information at the time being."></asp:GridView>
+   
 </asp:Content>

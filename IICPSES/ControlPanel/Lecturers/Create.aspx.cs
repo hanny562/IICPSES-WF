@@ -13,7 +13,12 @@ namespace IICPSES.ControlPanel.Lecturers
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // the Control is located in the master page, so need to find control in Master
+            var hyperlink = Master.FindControl("lnkCP_Lecturers") as HyperLink;
+            // find its parent - the <li> control
+            HtmlControl hc = hyperlink.Parent as HtmlControl;
+            // set the class as active for <li>
+            hc.Attributes.Add("class", "active");
         }
 
         protected void btnCreate_Click(object sender, EventArgs e)

@@ -3,18 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
-    <header>
-        <h2>
-                <asp:Label ID="lbLecturerIndex" runat="server" CssClass="page page-header" Text="Lecturer Index"></asp:Label></h2>
-    </header>
-    <body>
-    <br/>
-    <div>
-        <asp:Button ID="btnCreateLecturer" CssClass="btn btn-primary" runat="server" Text="New Lecturer" OnClick="btnCreateLecturer_Click" />  
-    </div>
-    <div>
-        <h3>List of Lecturers</h3>
-    </div>
-    </body>
+    <h2>Lecturer Index</h2>
+    <a href="Create.aspx" class="btn btn-primary">Create New Lecturer</a>
+
+    <h3>List of Lecturers</h3>
+    <asp:GridView ID="gvLecturers" runat="server" CssClass="table table-bordered"
+         ShowHeader="true" ShowHeaderWhenEmpty="true" EmptyDataText="There are no lecturers information at the time being."></asp:GridView>
+
 
 </asp:Content>

@@ -22,22 +22,31 @@ namespace IICPSES.ControlPanel.Programs {
         protected global::System.Web.UI.WebControls.Label lbProgramTitle;
         
         /// <summary>
-        /// txtPName control.
+        /// txtProgramName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPName;
+        protected global::System.Web.UI.WebControls.TextBox txtProgramName;
         
         /// <summary>
-        /// txtPCode control.
+        /// txtProgramCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPCode;
+        protected global::System.Web.UI.WebControls.TextBox txtProgramCode;
+        
+        /// <summary>
+        /// ddlSchools control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSchools;
         
         /// <summary>
         /// lblStatus_CreateProgram control.
@@ -49,12 +58,12 @@ namespace IICPSES.ControlPanel.Programs {
         protected global::System.Web.UI.WebControls.Label lblStatus_CreateProgram;
         
         /// <summary>
-        /// btnCreate control.
+        /// btnCreateProgram control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreate;
+        protected global::System.Web.UI.WebControls.Button btnCreateProgram;
     }
 }

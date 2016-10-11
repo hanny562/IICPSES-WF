@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IICPSES.Role;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,14 @@ namespace IICPSES.ControlPanel.Programs
             HtmlControl hc = hyperlink.Parent as HtmlControl;
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
+
+            BindGridView_Programs();
+        }
+
+        private void BindGridView_Programs()
+        {
+            gvPrograms.DataSource = Program.GetAllPrograms();
+            gvPrograms.DataBind();
         }
     }
 }

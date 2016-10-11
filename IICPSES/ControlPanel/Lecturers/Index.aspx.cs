@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IICPSES.Role;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,12 +19,15 @@ namespace IICPSES.ControlPanel.Lecturers
             HtmlControl hc = hyperlink.Parent as HtmlControl;
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
+
+            BindGridView_Lecturers();
             
         }
 
-        protected void btnCreateLecturer_Click(object sender, EventArgs eventArgs)
+        private void BindGridView_Lecturers()
         {
-            Response.Redirect("Create.aspx");
+            gvLecturers.DataSource = Lecturer.GetAllLecturers();
+            gvLecturers.DataBind();
         }
     }
 }
