@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
     <header>
-        <div style="text-align: center;">
-            <h2>Evaluation Result</h2>
+        <div style="text-align: left;">
+            <h2>Evaluation Report</h2>
         </div>
     </header>
     <body>
@@ -16,10 +16,12 @@
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
                 <br />
+                <br/>
                 <asp:Label ID="lbSubjectReport" runat="server" Text="Subject"></asp:Label><br />
                 <asp:DropDownList ID="ddlSubjectReport" runat="server">
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
+                <br />
                 <br />
                 <asp:Label ID="lbSemester" runat="server" Text="Semester"></asp:Label><br />
                 <asp:DropDownList ID="ddlSemesterReport" runat="server">

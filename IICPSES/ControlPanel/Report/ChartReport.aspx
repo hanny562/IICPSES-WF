@@ -7,30 +7,35 @@
 	<script type="text/javascript" src="../../Assets/js/Chart.min.js"></script>
 </head>
 <body>
-	<div class="container" runat="server">
-		<div style="text-align: center;">
-			<h2>Evaluation Result</h2>
+	<div runat="server">
+		<div class="container">
+			<div class="row">
+				<div style="text-align: center;">
+					<h2>Evaluation Result</h2>
+				</div>
+				<br />
+				<canvas id="canvas" height="450" width="600"></canvas>
+				<br />
+				<div>
+					<br />
+					<asp:Label ID="lbProgram" runat="server" Text="Program : "></asp:Label><br />
+					<br />
+					<asp:Label ID="lbSubject" runat="server" Text="Subject : "></asp:Label><br />
+					<br />
+					<asp:Label ID="lbSemester" runat="server" Text="Semester : "></asp:Label><br />
+					<br />
+					<asp:Label ID="lbLecturerName" runat="server" Text="Lecturer's Name : "></asp:Label><br />
+					<br />
+					<asp:Label ID="lbFeedback" runat="server" Text="Feedback : "></asp:Label><br />
+					<br />
+					<br />
+				</div>
+				<form runat="server">
+					<asp:Button ID="btnExport" runat="server" Text="Export" />
+					<asp:Button ID="btnPrint" runat="server" Text="Print" />
+				</form>
+			</div>
 		</div>
-		<br />
-		<canvas id="canvas" height="450" width="600"></canvas>
-		<br />
-		<div>
-			<br />
-			<asp:Label ID="lbProgram" runat="server" Text="Program : "></asp:Label><br />
-			<br />
-			<asp:Label ID="lbSubject" runat="server" Text="Subject : "></asp:Label><br />
-			<br />
-			<asp:Label ID="lbSemester" runat="server" Text="Semester : "></asp:Label><br />
-			<br />
-			<asp:Label ID="lbLecturerName" runat="server" Text="Lecturer's Name : "></asp:Label><br />
-			<br />
-			<asp:Label ID="lbFeedback" runat="server" Text="Feedback : "></asp:Label><br />
-			<br />
-			<br />
-		</div>
-		<form runat="server">
-			<asp:Button ID="btnExport" runat="server" Text="Export" />
-		</form>
 
 	</div>
 	<script>
