@@ -13,5 +13,10 @@ namespace IICPSES.ControlPanel.Report
         {
 
         }
+
+        protected void btnConfirm_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChartReport.aspx");
+        }
     }
 }

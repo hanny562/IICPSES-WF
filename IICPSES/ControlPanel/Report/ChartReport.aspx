@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Statistic of Lecturer</title>
-	<link href="/Content/css/style.css" media="screen" rel="stylesheet">
+	<link href="/Assets/css/dashboard.css" media="screen" rel="stylesheet">
 	<script type="text/javascript" src="../../Assets/js/Chart.min.js"></script>
 </head>
 <body>
