@@ -5,31 +5,34 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
     <header>
         <div style="text-align: left;">
-            <h2>Evaluation Report</h2>
+            <h2>
+                <asp:Label ID="lbReportIndex" runat="server" CssClass="page page-header" Text="Evaluation Report"></asp:Label></h2>
         </div>
     </header>
+    <br />
     <body>
         <div class="container">
             <div class="dropdown">
-                <asp:Label ID="lbProgramReport" runat="server" Text="Program"></asp:Label><br />
-                <asp:DropDownList ID="ddlProgramReport" runat="server">
-                    <asp:ListItem>Please Select</asp:ListItem>
-                </asp:DropDownList>
-                <br />
-                <br/>
-                <asp:Label ID="lbSubjectReport" runat="server" Text="Subject"></asp:Label><br />
-                <asp:DropDownList ID="ddlSubjectReport" runat="server">
+                <asp:Label ID="lbProgramReport" CssClass="label label-info" runat="server" Text="Program"></asp:Label><br />
+                <asp:DropDownList ID="ddlProgramReport" CssClass="dropdown dropdown-header" runat="server">
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
                 <br />
                 <br />
-                <asp:Label ID="lbSemester" runat="server" Text="Semester"></asp:Label><br />
-                <asp:DropDownList ID="ddlSemesterReport" runat="server">
+                <asp:Label ID="lbSubjectReport" CssClass="label label-info" runat="server" Text="Subject"></asp:Label><br />
+                <asp:DropDownList ID="ddlSubjectReport" CssClass="dropdown dropdown-header" runat="server">
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
-            </div><br/>
+                <br />
+                <br />
+                <asp:Label ID="lbSemester" CssClass="label label-info" runat="server" Text="Semester"></asp:Label><br />
+                <asp:DropDownList ID="ddlSemesterReport" CssClass="dropdown dropdown-header" runat="server">
+                    <asp:ListItem>Please Select</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <br />
             <div>
-                <asp:Button ID="btnConfirm" CssClass="btn btn-default" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
+                <asp:Button ID="btnConfirm" CssClass="btn btn-primary" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
             </div>
         </div>
     </body>

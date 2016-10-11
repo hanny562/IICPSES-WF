@@ -130,6 +130,7 @@
     <Content Include="ControlPanel\Index.aspx" />
     <Content Include="ControlPanel\Lecturers\Create.aspx" />
     <Content Include="ControlPanel\Lecturers\Index.aspx" />
+    <Content Include="ControlPanel\Programs\create.aspx" />
     <Content Include="ControlPanel\Programs\Index.aspx" />
     <Content Include="ControlPanel\Report\ChartReport.aspx" />
     <Content Include="ControlPanel\Report\Index.aspx" />
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="ControlPanel\Lecturers\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\Programs\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Programs\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlPanel\Programs\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

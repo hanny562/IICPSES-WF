@@ -53,18 +53,23 @@
                             <asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/" runat="server" ID="lnkCP_Semesters" Text="Semesters" /></li>
                         <li runat="server">
                             <asp:HyperLink NavigateUrl="~/ControlPanel/Subjects/" runat="server" ID="lnkCP_Subjects" Text="Subjects" /></li>
-                    </ul>
-                    <ul class="nav nav-sidebar">
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Report/" runat="server" ID="linkCP_Report" Text="Report" /></li>
                         <li runat="server">
                             <asp:HyperLink NavigateUrl="~/ControlPanel/Surveys/" runat="server" ID="lnkCP_Surveys" Text="Surveys" /></li>
                     </ul>
                     <ul class="nav nav-sidebar">
-                        <li>
-                            <a href="#">Nav item again</a></li>
-                        <li>
-                            <a href="#">One more nav</a></li>
-                        <li>
-                            <a href="#">Another nav item</a></li>
+
+                        
+                        <li><ul class="nav nav-sidebar">
+                                <li>
+                                    <a href="#">Nav item again</a></li>
+                                <li>
+                                    <a href="#">One more nav</a></li>
+                                <li>
+                                    <a href="#">Another nav item</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
