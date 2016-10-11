@@ -140,6 +140,7 @@
     <Content Include="ControlPanel\Schools\Manage\Lecturer.aspx" />
     <Content Include="ControlPanel\Semesters\Create.aspx" />
     <Content Include="ControlPanel\Semesters\Index.aspx" />
+    <Content Include="ControlPanel\Semesters\Manage\Subject.aspx" />
     <Content Include="ControlPanel\Subjects\Create.aspx" />
     <Content Include="ControlPanel\Subjects\Index.aspx" />
     <Content Include="ControlPanel\Surveys\Index.aspx" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="ControlPanel\Semesters\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\Semesters\Manage\Subject.aspx.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Semesters\Manage\Subject.aspx.designer.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlPanel\Subjects\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
@@ -344,7 +352,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ControlPanel\Semesters\Manage\" />
     <Folder Include="ControlPanel\Surveys\Answers\" />
     <Folder Include="ControlPanel\Surveys\Questions\" />
     <Folder Include="Survey\" />

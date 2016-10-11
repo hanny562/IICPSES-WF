@@ -8,4 +8,8 @@
     <h3>List of Semesters</h3>
     <asp:GridView runat="server" ID="gvSemesters" CssClass="table table-bordered"
         EmptyDataText="There are no semesters info at this time being."></asp:GridView>
+
+    <h3>List of Association of Semester Subjects</h3>
+    <asp:GridView runat="server" ID="gvSemesterSubjects" CssClass="table table-bordered"
+        EmptyDataText="There are no semester subjects association info at this time being."></asp:GridView>
 </asp:Content>

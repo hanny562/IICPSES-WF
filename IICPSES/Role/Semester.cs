@@ -57,5 +57,29 @@ namespace IICPSES.Role
                 }
             }
         }
+
+        /// <summary>
+        ///     Creates an association entry of semester, program subject, and lecturer
+        /// </summary>
+        /// <param name="semesterId"></param>
+        /// <param name="programSubjectId"></param>
+        /// <param name="lecturerId"></param>
+        public static void AssociateSemesterSubject(int semesterId, int programSubjectId, int lecturerId)
+        {
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "insert into [dbo].[SemesterSubject] values (@sid, @psid, @lid)";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sid", semesterId);
+                    cmd.Parameters.AddWithValue("@psid", programSubjectId);
+                    cmd.Parameters.AddWithValue("@lid", lecturerId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

@@ -75,7 +75,7 @@
                             <asp:HyperLink NavigateUrl="~/ControlPanel/Schools/Manage/Lecturer.aspx" runat="server" ID="lnkCP_SchoolLecturer" Text="Manage School Lecturers" />
                         </li>
                          <li runat="server">
-                            <asp:HyperLink NavigateUrl="~/ControlPanel/Programs/Manage/Subject.aspx" runat="server" ID="lnkCP_SemesterSubject" Text="Manage Semester Subjects" />
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/Manage/Subject.aspx" runat="server" ID="lnkCP_SemesterSubject" Text="Manage Semester Subjects" />
                         </li>
                             
 
