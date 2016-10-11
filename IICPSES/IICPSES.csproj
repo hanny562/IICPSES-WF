@@ -132,10 +132,12 @@
     <Content Include="ControlPanel\Lecturers\Index.aspx" />
     <Content Include="ControlPanel\Programs\Create.aspx" />
     <Content Include="ControlPanel\Programs\Index.aspx" />
+    <Content Include="ControlPanel\Programs\Manage\Subject.aspx" />
     <Content Include="ControlPanel\Report\ChartReport.aspx" />
     <Content Include="ControlPanel\Report\Index.aspx" />
     <Content Include="ControlPanel\Schools\Create.aspx" />
     <Content Include="ControlPanel\Schools\Index.aspx" />
+    <Content Include="ControlPanel\Schools\Manage\Lecturer.aspx" />
     <Content Include="ControlPanel\Semesters\Create.aspx" />
     <Content Include="ControlPanel\Semesters\Index.aspx" />
     <Content Include="ControlPanel\Subjects\Create.aspx" />
@@ -187,6 +189,13 @@
     <Compile Include="ControlPanel\Programs\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlPanel\Programs\Manage\Subject.aspx.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Programs\Manage\Subject.aspx.designer.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ControlPanel\Report\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,6 +216,13 @@
     </Compile>
     <Compile Include="ControlPanel\Schools\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\Schools\Manage\Lecturer.aspx.cs">
+      <DependentUpon>Lecturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Schools\Manage\Lecturer.aspx.designer.cs">
+      <DependentUpon>Lecturer.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlPanel\Semesters\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
@@ -328,6 +344,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ControlPanel\Surveys\Answers\" />
+    <Folder Include="ControlPanel\Surveys\Questions\" />
     <Folder Include="Survey\" />
   </ItemGroup>
   <PropertyGroup>

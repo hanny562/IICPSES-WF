@@ -56,5 +56,46 @@ namespace IICPSES.Role
                 }
             }
         }
+
+        public static DataSet GetAllProgramSubjects()
+        {
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "select ps.Id as PSId, p.Code as ProgramCode, p.Name as ProgramName, s.Code as SubjectCode, s.Name as SubjectName from [dbo].[ProgramSubject] ps inner join [dbo].[Program] p on ps.ProgramId = p.Id inner join [dbo].[Subject] s on ps.SubjectId = s.Id";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    var da = new SqlDataAdapter(cmd);
+                    var ds = new DataSet();
+
+                    da.Fill(ds);
+
+                    return ds;
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Associate a subject to a program.
+        /// </summary>
+        /// <param name="programId"></param>
+        /// <param name="subjectId"></param>
+        public static void AssociateProgramSubject(int programId, int subjectId)
+        {
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "insert into [dbo].[ProgramSubject] values (@sid, @pid)";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sid", subjectId);
+                    cmd.Parameters.AddWithValue("@pid", programId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using IICPSES.Role;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,13 +21,23 @@ namespace IICPSES.ControlPanel.Programs
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
 
-            BindGridView_Programs();
+            if(!IsPostBack)
+            {
+                BindGridView_Programs();
+                BindGridView_ProgramSubjects();
+            }
         }
 
         private void BindGridView_Programs()
         {
             gvPrograms.DataSource = Program.GetAllPrograms();
             gvPrograms.DataBind();
+        }
+
+        private void BindGridView_ProgramSubjects()
+        {
+            gvProgramSubjects.DataSource = Program.GetAllProgramSubjects();
+            gvProgramSubjects.DataBind();
         }
     }
 }

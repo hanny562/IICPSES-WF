@@ -85,13 +85,13 @@ namespace IICPSES {
         protected global::System.Web.UI.WebControls.HyperLink lnkCP_Subjects;
         
         /// <summary>
-        /// linkCP_Report control.
+        /// lnkCP_Report control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink linkCP_Report;
+        protected global::System.Web.UI.WebControls.HyperLink lnkCP_Report;
         
         /// <summary>
         /// lnkCP_Surveys control.
@@ -101,6 +101,33 @@ namespace IICPSES {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkCP_Surveys;
+        
+        /// <summary>
+        /// lnkCP_ProgramSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCP_ProgramSubject;
+        
+        /// <summary>
+        /// lnkCP_SchoolLecturer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCP_SchoolLecturer;
+        
+        /// <summary>
+        /// lnkCP_SemesterSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCP_SemesterSubject;
         
         /// <summary>
         /// frmMain control.
