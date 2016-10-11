@@ -9,7 +9,7 @@
     <body>
     <br/>
     <div>
-        <asp:Button ID="btnCreateProgram" CssClass="btn btn-primary" runat="server" Text="New" />  
+        <asp:Button ID="btnCreateProgram" CssClass="btn btn-primary" runat="server" Text="New Program" />  
     </div>
     <div>
         <h3>List of Programs</h3>

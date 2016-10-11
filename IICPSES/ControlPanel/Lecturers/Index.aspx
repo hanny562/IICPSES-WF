@@ -10,7 +10,7 @@
     <body>
     <br/>
     <div>
-        <asp:Button ID="btnCreateLecturer" CssClass="btn btn-primary" runat="server" Text="New" OnClick="btnCreateLecturer_Click" />  
+        <asp:Button ID="btnCreateLecturer" CssClass="btn btn-primary" runat="server" Text="New Lecturer" OnClick="btnCreateLecturer_Click" />  
     </div>
     <div>
         <h3>List of Lecturers</h3>
