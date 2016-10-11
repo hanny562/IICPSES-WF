@@ -3,17 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
-    <header>
-        <h2>
-            <asp:Label ID="lbSchIndex" runat="server" CssClass="page page-header" Text="School Index"></asp:Label></h2>
-    </header>
-    <body>
-        <br />
-        <div>
-            <asp:Button ID="btnCreateSch" CssClass="btn btn-primary" runat="server" Text="New School" />
-        </div>
-        <div>
-            <h3>List of Schools</h3>
-        </div>
-    </body>
+
+    <h2><asp:Label ID="lbSchIndex" runat="server" CssClass="page page-header" Text="School Index"></asp:Label></h2>
+
+    <a href="Create.aspx" class="btn btn-primary">New School</a>
+
+    <h3>List of Schools</h3>
+    <asp:GridView runat="server" ID="gvSchools" CssClass="table table-bordered"
+        EmptyDataText="There are no schools info at this time being."></asp:GridView>
+
 </asp:Content>

@@ -22,12 +22,12 @@ namespace IICPSES.ControlPanel.Schools {
         protected global::System.Web.UI.WebControls.Label lbSchIndex;
         
         /// <summary>
-        /// btnCreateSch control.
+        /// gvSchools control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateSch;
+        protected global::System.Web.UI.WebControls.GridView gvSchools;
     }
 }

@@ -45,20 +45,20 @@ namespace IICPSES.ControlPanel.Programs
         {
             if(!(string.IsNullOrWhiteSpace(txtProgramCode.Text) && string.IsNullOrWhiteSpace(txtProgramName.Text) && string.IsNullOrWhiteSpace(ddlSchools.SelectedValue)))
             {
-
-            }
-            else
-            {
                 try
                 {
                     // int.Parse is used instead of Convert.ToInt32 to prevent exception being thrown
                     Program.AddProgram(txtProgramName.Text, txtProgramCode.Text, Convert.ToInt32(ddlSchools.SelectedValue));
                     lblStatus_CreateProgram.Text = "Program added successfully!";
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     lblStatus_CreateProgram.Text = ex.ToString();
                 }
+            }
+            else
+            {
+                
             }
         }
     }

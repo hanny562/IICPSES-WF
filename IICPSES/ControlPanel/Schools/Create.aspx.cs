@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IICPSES.Role;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,7 +23,22 @@ namespace IICPSES.ControlPanel.Schools
 
         protected void btnCreateSchool_Click(object sender, EventArgs e)
         {
-
+            if(!(string.IsNullOrWhiteSpace(txtSchoolCode.Text) && string.IsNullOrWhiteSpace(txtSchoolName.Text)))
+            {
+                try
+                {
+                    School.AddSchool(txtSchoolName.Text, txtSchoolCode.Text);
+                    lblStatus_CreateSchool.Text = "School added successfully!";
+                }
+                catch (Exception ex)
+                {
+                    lblStatus_CreateSchool.Text = ex.ToString();
+                }
+            }
+            else
+            {
+                
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
     <a href="Create.aspx" class="btn btn-primary">Create Program</a>
 
     <h3>List of Programs</h3>
-    <asp:GridView runat="server" ID="gvPrograms" 
+    <asp:GridView runat="server" ID="gvPrograms" CssClass="table table-bordered"
         EmptyDataText="There are no programs information at the time being."></asp:GridView>
    
 </asp:Content>
