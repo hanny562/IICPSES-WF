@@ -1,6 +1,7 @@
 ﻿using IICPSES.Role;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,13 +21,32 @@ namespace IICPSES.ControlPanel.Schools
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
 
-            BindGridView_Schools();
+            if(!IsPostBack)
+            {
+                BindGridView_Schools();
+                BindGridView_SchoolLecturers();
+            }
         }
 
         private void BindGridView_Schools()
         {
             gvSchools.DataSource = School.GetAllSchools();
             gvSchools.DataBind();
+        }
+
+        private void BindGridView_SchoolLecturers()
+        {
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "select sl.Id, s.Name as SchoolName, s.Code as SchoolCode, l.Name as LecturerName from [dbo].[SchoolLecturer] sl inner join [dbo].[School] s on sl.SchoolId = s.Id inner join [dbo].[Lecturer] l on sl.LecturerId = l.Id";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    gvSchoolLecturers.DataSource = cmd.ExecuteReader();
+                    gvSchoolLecturers.DataBind();
+                }
+            }
         }
     }
 }

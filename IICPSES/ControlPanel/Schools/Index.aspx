@@ -12,4 +12,8 @@
     <asp:GridView runat="server" ID="gvSchools" CssClass="table table-bordered"
         EmptyDataText="There are no schools info at this time being."></asp:GridView>
 
+    <h3>List of Associated School Lecturers</h3>
+    <asp:GridView runat="server" ID="gvSchoolLecturers" CssClass="table table-bordered"
+        EmptyDataText="There are no association of school lecturers at this time being."></asp:GridView>
+
 </asp:Content>

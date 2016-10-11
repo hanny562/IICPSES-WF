@@ -29,5 +29,14 @@ namespace IICPSES.ControlPanel.Schools {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvSchools;
+        
+        /// <summary>
+        /// gvSchoolLecturers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvSchoolLecturers;
     }
 }

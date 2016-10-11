@@ -344,6 +344,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ControlPanel\Semesters\Manage\" />
     <Folder Include="ControlPanel\Surveys\Answers\" />
     <Folder Include="ControlPanel\Surveys\Questions\" />
     <Folder Include="Survey\" />
