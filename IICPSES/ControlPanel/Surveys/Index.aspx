@@ -5,15 +5,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
     <header>
         <h2>
-            <asp:Label ID="lbSurveyIndex" runat="server" CssClass="page page-header" Text="Surve Index"></asp:Label></h2>
+            <asp:Label ID="lbSurveyIndex" runat="server" CssClass="page page-header" Text="Survey Index"></asp:Label></h2>
     </header>
-    <body>
         <br />
-        <div>
-            <asp:Button ID="btnSurveyLecturer" CssClass="btn btn-primary" runat="server" Text="New Surveys" />
-        </div>
-        <div>
+            <a href="Create.aspx" class="btn btn-primary">Create New Question</a>
+
             <h3>List of Surveys</h3>
-        </div>
-    </body>
+            <asp:GridView runat="server" ID="gvSurvey" CssClass="table table-bordered"
+        EmptyDataText="There are no subjects info at this time being."></asp:GridView>
 </asp:Content>

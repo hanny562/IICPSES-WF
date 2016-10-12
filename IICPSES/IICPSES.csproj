@@ -135,6 +135,7 @@
     <Content Include="ControlPanel\Programs\Manage\Subject.aspx" />
     <Content Include="ControlPanel\Report\ChartReport.aspx" />
     <Content Include="ControlPanel\Report\Index.aspx" />
+    <Content Include="ControlPanel\Report\Report\BindReport.aspx" />
     <Content Include="ControlPanel\Schools\Create.aspx" />
     <Content Include="ControlPanel\Schools\Index.aspx" />
     <Content Include="ControlPanel\Schools\Manage\Lecturer.aspx" />
@@ -143,6 +144,7 @@
     <Content Include="ControlPanel\Semesters\Manage\Subject.aspx" />
     <Content Include="ControlPanel\Subjects\Create.aspx" />
     <Content Include="ControlPanel\Subjects\Index.aspx" />
+    <Content Include="ControlPanel\Surveys\Create.aspx" />
     <Content Include="ControlPanel\Surveys\Index.aspx" />
     <Content Include="Errors\SmartError.aspx" />
     <Content Include="Global.asax" />
@@ -204,6 +206,13 @@
     <Compile Include="ControlPanel\Report\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlPanel\Report\Report\BindReport.aspx.cs">
+      <DependentUpon>BindReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Report\Report\BindReport.aspx.designer.cs">
+      <DependentUpon>BindReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ControlPanel\Schools\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,6 +269,13 @@
     <Compile Include="ControlPanel\Subjects\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlPanel\Surveys\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Surveys\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ControlPanel\Surveys\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +313,7 @@
     <Compile Include="Role\School.cs" />
     <Compile Include="Role\Semester.cs" />
     <Compile Include="Role\Subject.cs" />
+    <Compile Include="Role\Surveys.cs" />
     <Compile Include="Shared.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

@@ -19,5 +19,10 @@ namespace IICPSES.ControlPanel.Surveys
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
         }
+        private void BindGridView_Subjects()
+        {
+            gvSurvey.DataSource = Role.Surveys.GetAllQuestion();
+            gvSurvey.DataBind();
+        }
     }
 }
