@@ -15,7 +15,6 @@ namespace IICPSES
         protected void Page_Load(object sender, EventArgs e)
         {
             using (var conn = new SqlConnection(Shared.GetConnectionString()))
-
             {
                 conn.Open();
 
