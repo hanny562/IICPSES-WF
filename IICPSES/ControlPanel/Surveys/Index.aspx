@@ -8,9 +8,9 @@
             <asp:Label ID="lbSurveyIndex" runat="server" CssClass="page page-header" Text="Survey Index"></asp:Label></h2>
     </header>
         <br />
-            <a href="Create.aspx" class="btn btn-primary">Create New Question</a>
+            <a href="Questions/Create.aspx" class="btn btn-primary">Create New Question</a>
 
-            <h3>List of Surveys</h3>
-            <asp:GridView runat="server" ID="gvSurvey" CssClass="table table-bordered"
+            <h3>List of Survey Questions</h3>
+            <asp:GridView runat="server" ID="gvSurveyQuestions" CssClass="table table-bordered"
         EmptyDataText="There are no subjects info at this time being."></asp:GridView>
 </asp:Content>

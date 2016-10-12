@@ -10,11 +10,12 @@ namespace IICPSES.Role
     public class Surveys
     {
         /// <summary>
-        ///     Adds the Question
+        ///     Adds the survey question into database
         /// </summary>
-        /// <param question="question"></param>
-        /// <param name="question"></param>
-        public static void AddSurveyQuestion(string question)
+        /// <param name="title">Question title</param>
+        /// <param name="description">Question description</param>
+        /// <param name="type">Question type</param>
+        public static void AddSurveyQuestion(string title, string description, int type)
         {
             // Creates a SqlConnection object to connect to SQL Server
             using (var conn = new SqlConnection(Shared.GetConnectionString()))
@@ -23,14 +24,15 @@ namespace IICPSES.Role
                 conn.Open();
 
                 // defines the SQL query to insert name into table
-                string sql = "insert into [dbo].[Question] values (@question, @dt)";
+                string sql = "insert into [dbo].[Question] values (@title, @desc, @type)";
 
                 // creates the SqlCommand object to establish connection and execute query
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     // pass the name value as parameter - to avoid SQL injection
-                    cmd.Parameters.AddWithValue("@question", question);
-                    cmd.Parameters.AddWithValue("@dt", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@title", title);
+                    cmd.Parameters.AddWithValue("@desc", description);
+                    cmd.Parameters.AddWithValue("@type", type);
 
                     // finally, execute the query
                     cmd.ExecuteNonQuery();

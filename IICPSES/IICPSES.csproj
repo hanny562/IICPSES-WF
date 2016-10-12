@@ -146,15 +146,16 @@
     <Content Include="ControlPanel\Subjects\Index.aspx" />
     <Content Include="ControlPanel\Surveys\Create.aspx" />
     <Content Include="ControlPanel\Surveys\Index.aspx" />
+    <Content Include="ControlPanel\Surveys\Questions\Create.aspx" />
     <Content Include="Errors\SmartError.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Src\Images\14483968_297803533934965_1461414969_n.png" />
-    <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlPanel\Index.aspx.cs">
@@ -283,6 +284,13 @@
     <Compile Include="ControlPanel\Surveys\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlPanel\Surveys\Questions\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Surveys\Questions\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Errors\SmartError.aspx.cs">
       <DependentUpon>SmartError.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -361,17 +369,18 @@
     <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Assets\js\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ControlPanel\Surveys\Answers\" />
+    <Folder Include="Survey\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControlPanel\Surveys\Answers\" />
-    <Folder Include="ControlPanel\Surveys\Questions\" />
-    <Folder Include="Survey\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

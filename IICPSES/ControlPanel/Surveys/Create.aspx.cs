@@ -28,7 +28,7 @@ namespace IICPSES.ControlPanel.Surveys
                 {
                     try
                     {
-                        Role.Surveys.AddSurveyQuestion(txtQuestion.Text);
+                        //Role.Surveys.AddSurveyQuestion(txtQuestion.Text);
 
                         lblStatus_CreateQuestion.CssClass = "bg-success";
                         lblStatus_CreateQuestion.Text = "Question was added successfully!";
