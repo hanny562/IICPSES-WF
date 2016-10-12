@@ -13,7 +13,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+<br/>
     <div class="container">
+        <div style="text-align: center;">
+            <img src="Src/Images/14483968_297803533934965_1461414969_n.png" />
+        </div>
+        <br/>
         <div class="row">
             <form id="frmPreLogin" runat="server">
                 <div>
@@ -21,16 +26,6 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </form>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="center-block">
-                    &copy; <%= DateTime.Now.Year %> INTI International College Penang Student Evaluation System
-                </div>
-            </div>
         </div>
     </div>
 
