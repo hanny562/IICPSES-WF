@@ -23,7 +23,7 @@ namespace IICPSES.ControlPanel.Report
             {
                 conn.Open();
 
-                string sql = "select Id, Name, Code, Concat(Code, ' - ', Name) as Display from [dbo].[Program]";
+                string sql = "select Id, Name, Code, Concat(Code, ' - ', Name) as Display from [dbo].[Report]";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     //ddlProgram.DataSource = cmd.ExecuteReader();
