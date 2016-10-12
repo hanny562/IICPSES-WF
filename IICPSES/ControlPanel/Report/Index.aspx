@@ -13,8 +13,8 @@
     <body>
         <div class="container">
             <div class="dropdown">
-                <asp:Label ID="lbProgramReport" CssClass="label label-info" runat="server" Text="Program"></asp:Label><br />
-                <asp:DropDownList ID="ddlProgramReport" CssClass="dropdown dropdown-header" runat="server">
+                <asp:Label ID="lbLecturerReport" CssClass="label label-info" runat="server" Text="Lecturer"></asp:Label><br />
+                <asp:DropDownList ID="ddlLecturerReport" CssClass="dropdown dropdown-header" runat="server">
                     <asp:ListItem>Please Select</asp:ListItem>
                 </asp:DropDownList>
                 <br />
@@ -25,10 +25,7 @@
                 </asp:DropDownList>
                 <br />
                 <br />
-                <asp:Label ID="lbSemester" CssClass="label label-info" runat="server" Text="Semester"></asp:Label><br />
-                <asp:DropDownList ID="ddlSemesterReport" CssClass="dropdown dropdown-header" runat="server">
-                    <asp:ListItem>Please Select</asp:ListItem>
-                </asp:DropDownList>
+               
             </div>
             <br />
             <div>

@@ -22,22 +22,22 @@ namespace IICPSES.ControlPanel.Report {
         protected global::System.Web.UI.WebControls.Label lbReportIndex;
         
         /// <summary>
-        /// lbProgramReport control.
+        /// lbLecturerReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbProgramReport;
+        protected global::System.Web.UI.WebControls.Label lbLecturerReport;
         
         /// <summary>
-        /// ddlProgramReport control.
+        /// ddlLecturerReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProgramReport;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLecturerReport;
         
         /// <summary>
         /// lbSubjectReport control.
@@ -56,24 +56,6 @@ namespace IICPSES.ControlPanel.Report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSubjectReport;
-        
-        /// <summary>
-        /// lbSemester control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSemester;
-        
-        /// <summary>
-        /// ddlSemesterReport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSemesterReport;
         
         /// <summary>
         /// btnConfirm control.
