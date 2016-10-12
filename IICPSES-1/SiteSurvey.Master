@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteSurvey.master.cs" Inherits="IICPSES.SiteSurvey" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Evaluation System</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <div style="text-align: center;">
+        <img src="Src/Images/14483968_297803533934965_1461414969_n.png" /></div>
+</head>
+<body>
+    <div class="container">
+        <form id="frmSurvey" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <script src="Assets/js/jquery-3.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="Assets/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <div id="footer" class="col-sm-offset-4 col-sm-4">
+            <hr />
+            <footer>
+                <p>&copy; <%= DateTime.Now.Year %> INTI International College Penang Student Evaluation System</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
+
