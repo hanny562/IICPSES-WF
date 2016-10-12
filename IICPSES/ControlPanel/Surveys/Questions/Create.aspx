@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h2>Create Survey Question</h2>
+            <p>Create question that can be used by the survey.</p>
 
             <asp:Label Text="Question Title" CssClass="label label-info" runat="server" />
             <asp:TextBox runat="server" ID="txtQuestionTitle" CssClass="form-control" placeholder="Question Title" required="required" />

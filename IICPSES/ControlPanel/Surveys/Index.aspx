@@ -3,14 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
-    <header>
-        <h2>
-            <asp:Label ID="lbSurveyIndex" runat="server" CssClass="page page-header" Text="Survey Index"></asp:Label></h2>
-    </header>
-        <br />
-            <a href="Questions/Create.aspx" class="btn btn-primary">Create New Question</a>
 
-            <h3>List of Survey Questions</h3>
-            <asp:GridView runat="server" ID="gvSurveyQuestions" CssClass="table table-bordered"
-        EmptyDataText="There are no subjects info at this time being."></asp:GridView>
+    <h2>Survey Index</h2>
+
+    <h3>List of Survey Questions</h3>
+    <a href="Questions/Create.aspx" class="btn btn-primary">Create New Survey Question</a>
+    <asp:GridView runat="server" ID="gvSurveyQuestions" CssClass="table table-bordered"
+        EmptyDataText="There are no survey questions info at this time being.">
+    </asp:GridView>
 </asp:Content>
