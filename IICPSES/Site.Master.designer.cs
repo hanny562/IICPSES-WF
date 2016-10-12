@@ -85,15 +85,6 @@ namespace IICPSES {
         protected global::System.Web.UI.WebControls.HyperLink lnkCP_Subjects;
         
         /// <summary>
-        /// lnkCP_Report control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkCP_Report;
-        
-        /// <summary>
         /// lnkCP_Surveys control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace IICPSES {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkCP_Surveys;
+        
+        /// <summary>
+        /// lnkCP_Report control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCP_Report;
         
         /// <summary>
         /// lnkCP_ProgramSubject control.

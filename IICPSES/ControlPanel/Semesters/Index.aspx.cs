@@ -41,20 +41,14 @@ namespace IICPSES.ControlPanel.Semesters
                 conn.Open();
 
                 string sql = "select ss.Id, s.Name as SemesterName, p.Code as ProgramCode, p.Name as ProgramName, su.Code as SubjectCode, su.Name as SubjectName, sc.Code as SchoolCode, sc.Name as SchoolName, le.Name as LecturerName from [dbo].[SemesterSubject] ss " +
-                        "inner join[dbo].[Semester] " +
-                        "s on ss.SemesterId = s.Id " +
-                        "inner join[dbo].[ProgramSubject] " +
-                        "ps on ss.ProgramSubjectId = ps.Id " +
-                        "inner join[dbo].[Program] " +
-                        "p on p.Id = ps.ProgramId " +
-                        "inner join[dbo].[Subject] " +
-                        "su on su.Id = ps.SubjectId " +
-                        "inner join[dbo].[SchoolLecturer] " +
-                        "sl on ss.SchoolLecturerId = sl.Id " +
-                        "inner join[dbo].[School] " +
-                        "sc on sc.Id = sl.SchoolId " +
-                        "inner join[dbo].[Lecturer] " +
-                        "le on le.Id = sl.LecturerId";
+                        "inner join[dbo].[Semester] s on ss.SemesterId = s.Id " +
+                        "inner join[dbo].[ProgramSubject] ps on ss.ProgramSubjectId = ps.Id " +
+                        "inner join[dbo].[Program] p on p.Id = ps.ProgramId " +
+                        "inner join[dbo].[Subject] su on su.Id = ps.SubjectId " +
+                        "inner join[dbo].[SchoolLecturer] sl on ss.LecturerId = sl.Id " +
+                        "inner join[dbo].[School] sc on sc.Id = sl.SchoolId " +
+                        "inner join[dbo].[Lecturer] le on le.Id = sl.LecturerId";
+
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     gvSemesterSubjects.DataSource = cmd.ExecuteReader();
