@@ -31,6 +31,8 @@ namespace IICPSES.ControlPanel.Lecturers
 
                     lblStatus_CreateLecturer.CssClass = "bg-success";
                     lblStatus_CreateLecturer.Text = "Lecturer was added successfully!";
+
+                    // Response.Redirect("Index.aspx");
                 }
                 catch(Exception ex)
                 {

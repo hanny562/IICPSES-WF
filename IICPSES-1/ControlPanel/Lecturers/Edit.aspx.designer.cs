@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IICPSES.ControlPanel.Lecturers {
+namespace IICPSES_1.ControlPanel.Lecturers {
     
     
-    public partial class Create {
+    public partial class Edit {
         
         /// <summary>
         /// txtName control.
@@ -22,21 +22,30 @@ namespace IICPSES.ControlPanel.Lecturers {
         protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// lblStatus_CreateLecturer control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatus_CreateLecturer;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
-        /// btnCreate control.
+        /// lblStatus_EditLecturer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreate;
+        protected global::System.Web.UI.WebControls.Label lblStatus_EditLecturer;
+        
+        /// <summary>
+        /// hfLecturerId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfLecturerId;
     }
 }

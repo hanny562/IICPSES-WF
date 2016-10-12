@@ -37,6 +37,67 @@ namespace IICPSES.Role
             }
         }
 
+        public static void EditLecturer(int id, string name)
+        {
+            string sql = "update [dbo].[Lecturer] set Name=@name where Id=@id";
+
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@name", name);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void DeleteLecturer(int id)
+        {
+            string sql = "delete from [dbo].[Lecturer] where Id=@id";
+
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static string GetLecturerName(int id)
+        {
+            string sql = "select Name from [dbo].[Lecturer] where Id=@id";
+            string name = string.Empty;
+
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (var rdr = cmd.ExecuteReader())
+                    {
+                        if(rdr.Read())
+                        {
+                            name = rdr[0].ToString();
+                        }
+                    }
+                }
+            }
+
+            return name;
+        }
+
         public static DataSet GetAllLecturers()
         {
             using (var conn = new SqlConnection(Shared.GetConnectionString()))
