@@ -18,11 +18,40 @@ namespace IICPSES.ControlPanel.Surveys
             HtmlControl hc = hyperlink.Parent as HtmlControl;
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
+
+            if (!IsPostBack)
+            {
+                BindGridView_SurveyQuestions();
+            }
         }
-        private void BindGridView_Subjects()
+        private void BindGridView_SurveyQuestions()
         {
-            gvSurvey.DataSource = Role.Surveys.GetAllQuestion();
-            gvSurvey.DataBind();
+            gvSurveyQuestions.DataSource = Role.Surveys.GetAllQuestion();
+            gvSurveyQuestions.RowDataBound += GvSurveyQuestions_RowDataBound;
+            gvSurveyQuestions.DataBind();
+        }
+
+        // RowDataBound event that controls what happens when each row is bound to the gridview
+        // Purpose: to change Type to user-readability (e.g. 1 - Plain Text, 2 - Number, 3 - True/False)
+        private void GvSurveyQuestions_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                var questionType = e.Row.Cells[3].Text;
+
+                switch (questionType)
+                {
+                    case "1":
+                        e.Row.Cells[3].Text = "Plain Text";
+                        break;
+                    case "2":
+                        e.Row.Cells[3].Text = "Number";
+                        break;
+                    case "3":
+                        e.Row.Cells[3].Text = "True/False";
+                        break;
+                }
+            }
         }
     }
 }
