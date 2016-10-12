@@ -31,9 +31,6 @@ namespace IICPSES.ControlPanel.Report
                     ddlLecturerReport.DataTextField = "ProgramCode";
                     ddlLecturerReport.DataValueField = "Id";
                     ddlLecturerReport.DataBind();
-
-                    ddlSubjectReport.DataBind();
-
                 }
 
                 const string sql = "select ps.Id, l.Name as LecturerName from [dbo].[ProgramSubject] ps inner join [dbo].[Lecturer] l on ps.LecturerID = l.Id";
@@ -43,16 +40,11 @@ namespace IICPSES.ControlPanel.Report
                     ddlLecturerReport.DataTextField = "LecturerName";
                     ddlLecturerReport.DataValueField = "Id";
                     ddlLecturerReport.DataBind();
-
-                    ddlSubjectReport.DataBind();
-
                 }
 
-                const string sql2 = "select ps.Id, p.Code as ProgramCode, s.Code as SubjectCode from [dbo].[ProgramSubject] ps inner join [dbo].[Subject] s on ps.SubjectId = s.Id";
+                const string sql2 = "select ps.Id, s.Code as SubjectCode from [dbo].[ProgramSubject] ps inner join [dbo].[Subject] s on ps.SubjectId = s.Id";
                 using (var cmd2 = new SqlCommand(sql2, conn))
                 {
-                    ddlLecturerReport.DataSource = cmd2.ExecuteReader();
-
                     ddlSubjectReport.DataSource = cmd2.ExecuteReader();
                     ddlSubjectReport.DataTextField = "DisplaySubject";
                     ddlSubjectReport.DataValueField = "Id";
