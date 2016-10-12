@@ -21,7 +21,10 @@ namespace IICPSES.ControlPanel.Programs
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
 
-            BindDropDownList_School();
+            if(!IsPostBack)
+            {
+                BindDropDownList_School();
+            }
         }
 
         private void BindDropDownList_School()
@@ -43,12 +46,11 @@ namespace IICPSES.ControlPanel.Programs
 
         protected void btnCreateProgram_Click(object sender, EventArgs e)
         {
-            if(!(string.IsNullOrWhiteSpace(txtProgramCode.Text) && string.IsNullOrWhiteSpace(txtProgramName.Text) && string.IsNullOrWhiteSpace(ddlSchools.SelectedValue)))
+            if(!(string.IsNullOrWhiteSpace(txtProgramCode.Text) && string.IsNullOrWhiteSpace(txtProgramName.Text) && string.IsNullOrWhiteSpace(ddlSchools.SelectedItem.Value)))
             {
                 try
                 {
-                    // int.Parse is used instead of Convert.ToInt32 to prevent exception being thrown
-                    Program.AddProgram(txtProgramName.Text, txtProgramCode.Text, Convert.ToInt32(ddlSchools.SelectedValue));
+                    Program.AddProgram(txtProgramName.Text, txtProgramCode.Text, Convert.ToInt32(ddlSchools.SelectedItem.Value));
                     lblStatus_CreateProgram.Text = "Program added successfully!";
                 }
                 catch (Exception ex)

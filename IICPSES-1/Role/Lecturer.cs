@@ -115,5 +115,53 @@ namespace IICPSES.Role
                 }
             }
         }
+
+        public static int GetSchoolLecturerId(int lecturerId, int schoolId)
+        {
+            string sql = "select Id from [dbo].[SchoolLecturer] where LecturerID=@lid and SchoolID=@sid";
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@lid", lecturerId);
+                    cmd.Parameters.AddWithValue("@sid", schoolId);
+
+                    using (var rdr = cmd.ExecuteReader())
+                    {
+                        if(rdr.Read())
+                        {
+                            return Convert.ToInt32(rdr[0].ToString());
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
+
+        public static int GetProgramSubjectId(int subjectId, int programId)
+        {
+            string sql = "select Id from [dbo].[ProgramSubject] where SubjectID=@sid and ProgramID=@pid";
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sid", subjectId);
+                    cmd.Parameters.AddWithValue("@pid", programId);
+
+                    using (var rdr = cmd.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            return Convert.ToInt32(rdr[0].ToString());
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
     }
 }

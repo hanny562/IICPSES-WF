@@ -13,13 +13,22 @@ namespace IICPSES {
     public partial class Index {
         
         /// <summary>
-        /// lbSurveyFrontPage control.
+        /// smSurveySelection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSurveyFrontPage;
+        protected global::System.Web.UI.ScriptManager smSurveySelection;
+        
+        /// <summary>
+        /// upSurveySelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upSurveySelection;
         
         /// <summary>
         /// lbSurveyProgram control.
@@ -76,12 +85,21 @@ namespace IICPSES {
         protected global::System.Web.UI.WebControls.DropDownList ddlSurveySemester;
         
         /// <summary>
-        /// btnNext control.
+        /// lblSurvey_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNext;
+        protected global::System.Web.UI.WebControls.Label lblSurvey_Status;
+        
+        /// <summary>
+        /// btnSurveyNext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSurveyNext;
     }
 }

@@ -46,7 +46,7 @@ namespace IICPSES.ControlPanel.Semesters
                         "inner join[dbo].[ProgramSubject] ps on ss.ProgramSubjectId = ps.Id " +
                         "inner join[dbo].[Program] p on p.Id = ps.ProgramId " +
                         "inner join[dbo].[Subject] su on su.Id = ps.SubjectId " +
-                        "inner join[dbo].[SchoolLecturer] sl on ss.LecturerId = sl.Id " +
+                        "inner join[dbo].[SchoolLecturer] sl on ss.SchoolLecturerId = sl.Id " +
                         "inner join[dbo].[School] sc on sc.Id = sl.SchoolId " +
                         "inner join[dbo].[Lecturer] le on le.Id = sl.LecturerId";
 

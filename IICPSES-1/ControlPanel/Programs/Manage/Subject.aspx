@@ -11,7 +11,7 @@
             <asp:DropDownList runat="server" ID="ddlProgram" CssClass="form-control"></asp:DropDownList>
 
             <asp:Label Text="Subject List" CssClass="label label-info" runat="server" />
-            <asp:CheckBoxList ID="cblSubjects" runat="server" CssClass="form-control"></asp:CheckBoxList>
+            <asp:CheckBoxList ID="cblSubjects" runat="server"></asp:CheckBoxList>
 
             <p>Click <strong>Associate</strong> to start associating the selected subjects to the selected program.</p>
             <asp:Button Text="Associate" runat="server" ID="btnAssociateProgramSubjects" CssClass="btn btn-primary" OnClick="btnAssociateProgramSubjects_Click" />
