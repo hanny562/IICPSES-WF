@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
+using System.Data.SqlClient;
+using Newtonsoft.Json;
+using System.Data;
 
 namespace IICPSES.ControlPanel.Surveys
 {
@@ -22,6 +26,7 @@ namespace IICPSES.ControlPanel.Surveys
             if (!IsPostBack)
             {
                 BindGridView_SurveyQuestions();
+                dummy.Text = foo();
             }
         }
         private void BindGridView_SurveyQuestions()
@@ -30,6 +35,27 @@ namespace IICPSES.ControlPanel.Surveys
             gvSurveyQuestions.RowDataBound += GvSurveyQuestions_RowDataBound;
             gvSurveyQuestions.DataBind();
         }
+
+        private string foo()
+        {
+            var output = string.Empty;
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "select * from [dbo].[Question]";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    var da = new SqlDataAdapter(cmd);
+                    var ds = new DataSet();
+
+                    da.Fill(ds);
+                    output = JsonConvert.SerializeObject(ds);
+                }
+            }
+            return output;
+        }
+
 
         // RowDataBound event that controls what happens when each row is bound to the gridview
         // Purpose: to change Type to user-readability (e.g. 1 - Plain Text, 2 - Number, 3 - True/False)

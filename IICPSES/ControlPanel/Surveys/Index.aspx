@@ -11,4 +11,6 @@
     <asp:GridView runat="server" ID="gvSurveyQuestions" CssClass="table table-bordered"
         EmptyDataText="There are no survey questions info at this time being.">
     </asp:GridView>
+
+    <asp:Label ID="dummy" runat="server" />
 </asp:Content>
