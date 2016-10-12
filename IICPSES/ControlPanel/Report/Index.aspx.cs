@@ -20,17 +20,44 @@ namespace IICPSES.ControlPanel.Report
         private void BindDropDownList_Programs()
         {
             using (var conn = new SqlConnection(Shared.GetConnectionString()))
+
             {
                 conn.Open();
 
-                string sql = "select Id, Name, Code, Concat(Code, ' - ', Name) as Display from [dbo].[Report]";
+                const string sql3 = "select ps.Id, p.Code as ProgramCode from [dbo].[ProgramSubject] ps inner join [dbo].[Program] p on ps.ProgramId = p.Id";
+                using (var cmd3 = new SqlCommand(sql3, conn))
+                {
+                    ddlLecturerReport.DataSource = cmd3.ExecuteReader();
+                    ddlLecturerReport.DataTextField = "ProgramCode";
+                    ddlLecturerReport.DataValueField = "Id";
+                    ddlLecturerReport.DataBind();
+
+                    ddlSubjectReport.DataBind();
+
+                }
+
+                const string sql = "select ps.Id, l.Name as LecturerName from [dbo].[ProgramSubject] ps inner join [dbo].[Lecturer] l on ps.LecturerID = l.Id";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
-                    //ddlProgram.DataSource = cmd.ExecuteReader();
-                    //ddlProgram.DataTextField = "Display";
-                    //ddlProgram.DataValueField = "Id";
+                    ddlLecturerReport.DataSource = cmd.ExecuteReader();
+                    ddlLecturerReport.DataTextField = "LecturerName";
+                    ddlLecturerReport.DataValueField = "Id";
+                    ddlLecturerReport.DataBind();
 
-                    //ddlProgram.DataBind();
+                    ddlSubjectReport.DataBind();
+
+                }
+
+                const string sql2 = "select ps.Id, p.Code as ProgramCode, s.Code as SubjectCode from [dbo].[ProgramSubject] ps inner join [dbo].[Subject] s on ps.SubjectId = s.Id";
+                using (var cmd2 = new SqlCommand(sql2, conn))
+                {
+                    ddlLecturerReport.DataSource = cmd2.ExecuteReader();
+
+                    ddlSubjectReport.DataSource = cmd2.ExecuteReader();
+                    ddlSubjectReport.DataTextField = "DisplaySubject";
+                    ddlSubjectReport.DataValueField = "Id";
+
+                    ddlSubjectReport.DataBind();
 
                 }
             }

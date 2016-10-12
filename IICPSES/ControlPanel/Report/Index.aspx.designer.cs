@@ -22,6 +22,24 @@ namespace IICPSES.ControlPanel.Report {
         protected global::System.Web.UI.WebControls.Label lbReportIndex;
         
         /// <summary>
+        /// lbProgramReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbProgramReport;
+        
+        /// <summary>
+        /// ddlProgramReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlProgramReport;
+        
+        /// <summary>
         /// lbLecturerReport control.
         /// </summary>
         /// <remarks>
