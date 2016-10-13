@@ -13,7 +13,8 @@
                 <div class="dropdown">
                     <asp:Label ID="lbSurveySchool" CssClass="label label-info" runat="server" Text="Program"></asp:Label><br />
                     <asp:DropDownList ID="ddlSurveySchool" CssClass="form-control" runat="server" AutoPostBack="True" 
-                        OnSelectedIndexChanged="ddlSurveySchool_SelectedIndexChanged"
+                        OnSelectedIndexChanged="ddlSurveySchool_SelectedIndexChanged" 
+                        AppendDataBoundItems="true"
                         >
                         <asp:ListItem Text="Please Select School" Value=""></asp:ListItem>
                     </asp:DropDownList>
@@ -21,7 +22,7 @@
 
                     <asp:Label ID="lbSurveyProgram" CssClass="label label-info" runat="server" Text="Program"></asp:Label><br />
                     <asp:DropDownList ID="ddlSurveyProgram" CssClass="form-control" runat="server" AutoPostBack="True" 
-                        OnSelectedIndexChanged="ddlSurveyProgram_SelectedIndexChanged" 
+                        OnSelectedIndexChanged="ddlSurveyProgram_SelectedIndexChanged" OnDataBound="ddlSurveyProgram_DataBound"
                         >
                         <asp:ListItem Text="Please Select Program" Value=""></asp:ListItem>
                     </asp:DropDownList>
@@ -29,7 +30,7 @@
 
                     <asp:Label ID="lbSurveySubject" CssClass="label label-info" runat="server" Text="Subject"></asp:Label><br />
                     <asp:DropDownList ID="ddlSurveySubject" CssClass="form-control" runat="server" AutoPostBack="True" 
-                     OnSelectedIndexChanged="ddlSurveySubject_SelectedIndexChanged" 
+                     OnSelectedIndexChanged="ddlSurveySubject_SelectedIndexChanged" OnDataBound="ddlSurveySubject_DataBound"
                         >
                         <asp:ListItem Text="Please Select Subject" Value=""></asp:ListItem>
                     </asp:DropDownList>
@@ -37,7 +38,7 @@
 
                     <asp:Label ID="lbSurveyLecturer" CssClass="label label-info" runat="server" Text="Subject"></asp:Label><br />
                     <asp:DropDownList ID="ddlSurveyLecturer" CssClass="form-control" runat="server" AutoPostBack="True" 
-                     OnSelectedIndexChanged="ddlSurveyLecturer_SelectedIndexChanged" 
+                     OnSelectedIndexChanged="ddlSurveyLecturer_SelectedIndexChanged" OnDataBound="ddlSurveyLecturer_DataBound"
                         >
                         <asp:ListItem Text="Please Select Lecturer" Value=""></asp:ListItem>
                     </asp:DropDownList>

@@ -41,6 +41,7 @@ namespace IICPSES
                     ddlSurveySchool.DataValueField = "Id";
 
                     ddlSurveySchool.DataBind();
+
                 }
             }
         }
@@ -152,14 +153,11 @@ namespace IICPSES
             }
         }
 
-
-
         protected void ddlSurveyProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
             BindDropDownList_Subject(Convert.ToInt32(ddl.SelectedValue));
         }
-
 
         protected void btnSurveyNext_Click(object sender, EventArgs e)
         {
@@ -208,7 +206,7 @@ namespace IICPSES
         protected void ddlSurveySubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
-            BindDropDownList_Subject(Convert.ToInt32(ddl.SelectedValue));
+            BindDropDownList_Lecturer(Convert.ToInt32(ddlSurveyProgram.SelectedValue), Convert.ToInt32(ddlSurveySubject.SelectedValue));
         }
 
         protected void ddlSurveySubject_DataBound(object sender, EventArgs e)
