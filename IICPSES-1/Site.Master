@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IICPSES.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Student Evaluation System</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/css/dashboard.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Student Evaluation System</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Nav_Overview" Text="Dashboard" /></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Index.aspx" runat="server" ID="lnkCP_Index" Text="Overview" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Schools/" runat="server" ID="lnkCP_Schools" Text="Schools" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Lecturers/" runat="server" ID="lnkCP_Lecturers" Text="Lecturers" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Programs/" runat="server" ID="lnkCP_Programs" Text="Programs" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/" runat="server" ID="lnkCP_Semesters" Text="Semesters" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Subjects/" runat="server" ID="lnkCP_Subjects" Text="Subjects" />
+                        </li>
+
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Surveys/" runat="server" ID="lnkCP_Surveys" Text="Surveys" />
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-sidebar">
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Report/" runat="server" ID="lnkCP_Report" Text="Report" />
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-sidebar">
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Programs/Manage/Subject.aspx" runat="server" ID="lnkCP_ProgramSubject" Text="Manage Program Subjects" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Schools/Manage/Lecturer.aspx" runat="server" ID="lnkCP_SchoolLecturer" Text="Manage School Lecturers" />
+                        </li>
+                        <li runat="server">
+                            <asp:HyperLink NavigateUrl="~/ControlPanel/Semesters/Manage/Subject.aspx" runat="server" ID="lnkCP_SemesterSubject" Text="Manage Semester Subjects" />
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <form id="frmMain" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="container body-content">
+            <hr />
+            <footer>
+                <p>&nbsp;&copy; <%= DateTime.Now.Year %> INTI International College Penang Student Evaluation System</p>
+            </footer>
+        </div>
+
+        <script src="Assets/js/jquery-3.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="Assets/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
