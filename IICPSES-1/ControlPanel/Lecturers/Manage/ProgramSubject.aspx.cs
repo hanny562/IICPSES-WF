@@ -108,8 +108,6 @@ namespace IICPSES_1.ControlPanel.Lecturers.Manage
             }
             else
             {
-                
-
                 int schoolLecturerId = Lecturer.GetSchoolLecturerId(Convert.ToInt32(ddlLecturer.SelectedValue), Convert.ToInt32(ddlSchool.SelectedValue));
                 var programSubjectIdList = new List<int>();
 
@@ -173,25 +171,25 @@ namespace IICPSES_1.ControlPanel.Lecturers.Manage
         protected void ddlSchool_SelectedIndexChanged(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
-            BindDropDownList_Program(Convert.ToInt32(ddl.SelectedValue));
+            BindDropDownList_Program(int.Parse(ddl.SelectedValue));
         }
 
         protected void ddlProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
-            BindCheckBoxList_Subject(Convert.ToInt32(ddl.SelectedValue));
+            BindCheckBoxList_Subject(int.Parse(ddl.SelectedValue));
         }
 
         protected void ddlProgram_DataBound(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
-            BindCheckBoxList_Subject(Convert.ToInt32(ddl.SelectedValue));
+            BindCheckBoxList_Subject(int.Parse(ddl.SelectedValue));
         }
 
         protected void ddlSchool_DataBound(object sender, EventArgs e)
         {
             var ddl = sender as DropDownList;
-            BindDropDownList_Program(Convert.ToInt32(ddl.SelectedValue));
+            BindDropDownList_Program(int.Parse(ddl.SelectedValue));
         }
     }
 

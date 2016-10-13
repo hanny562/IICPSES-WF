@@ -11,6 +11,17 @@
 
     <h3>List of Subjects</h3>
     <asp:GridView runat="server" ID="gvSubjects" CssClass="table table-bordered"
-        EmptyDataText="There are no subjects info at this time being."></asp:GridView>
+        EmptyDataText="There are no subjects info at this time being." AutoGenerateColumns="false" ShowHeaderWhenEmpty="true">
+        <Columns>
+            <asp:TemplateField HeaderText="No.">
+                <ItemTemplate>
+                    <%# Container.DataItemIndex + 1 %>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="Name" HeaderText="Subject Name" />
+            <asp:BoundField DataField="Code" HeaderText="Subject Code" />
+            <asp:BoundField DataField="DateAdded" HeaderText="Date Added" />
+        </Columns>
+    </asp:GridView>
 
 </asp:Content>
