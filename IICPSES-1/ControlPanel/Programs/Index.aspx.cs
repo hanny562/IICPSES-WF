@@ -21,7 +21,7 @@ namespace IICPSES.ControlPanel.Programs
             // set the class as active for <li>
             hc.Attributes.Add("class", "active");
 
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 BindGridView_Programs();
                 BindGridView_ProgramSubjects();
@@ -30,8 +30,17 @@ namespace IICPSES.ControlPanel.Programs
 
         private void BindGridView_Programs()
         {
-            gvPrograms.DataSource = Program.GetAllPrograms();
-            gvPrograms.DataBind();
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                string sql = "select p.Id, p.Name, p.Code as ProgramCode, s.Code as SchoolCode, p.DateAdded from [dbo].[Program] p inner join [dbo].[School] s on p.SchoolId = s.Id";
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    gvPrograms.DataSource = cmd.ExecuteReader();
+                    gvPrograms.DataBind();
+                }
+            }
         }
 
         private void BindGridView_ProgramSubjects()

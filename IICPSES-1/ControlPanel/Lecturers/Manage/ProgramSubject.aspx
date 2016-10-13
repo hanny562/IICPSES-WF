@@ -14,13 +14,27 @@
                     <p>Select to begin association between lecturer, program, and subject.</p>
 
                     <asp:Label Text="Lecturer" CssClass="label label-info" runat="server" />
-                    <asp:DropDownList runat="server" ID="ddlLecturer" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlLecturer_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlLecturer" CssClass="form-control" AutoPostBack="true" 
+                        OnSelectedIndexChanged="ddlLecturer_SelectedIndexChanged"
+                        AppendDataBoundItems="true">
+                        <asp:ListItem Text="Please Select Lecturer" Value="0" />
+                    </asp:DropDownList>
 
                     <asp:Label Text="School" CssClass="label label-info" runat="server" />
-                    <asp:DropDownList runat="server" ID="ddlSchool" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlSchool_SelectedIndexChanged" OnDataBound="ddlSchool_DataBound"></asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlSchool" CssClass="form-control" AutoPostBack="true" 
+                        OnSelectedIndexChanged="ddlSchool_SelectedIndexChanged" 
+                        OnDataBound="ddlSchool_DataBound"
+                        AppendDataBoundItems="true">
+                        <asp:ListItem Text="Please Select School" Value="0" />
+                    </asp:DropDownList>
 
                     <asp:Label Text="Program" CssClass="label label-info" runat="server" />
-                    <asp:DropDownList runat="server" ID="ddlProgram" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged" OnDataBound="ddlProgram_DataBound"></asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlProgram" CssClass="form-control" AutoPostBack="true" 
+                        OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged" 
+                        OnDataBound="ddlProgram_DataBound"
+                        AppendDataBoundItems="true">
+                        <asp:ListItem Text="Please Select Program" Value="0" />
+                    </asp:DropDownList>
 
                     <asp:Label Text="Subjects" CssClass="label label-info" runat="server" />
                     <asp:CheckBoxList runat="server" ID="cblSubjects"></asp:CheckBoxList>

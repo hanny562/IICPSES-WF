@@ -31,6 +31,24 @@ namespace IICPSES {
         protected global::System.Web.UI.UpdatePanel upSurveySelection;
         
         /// <summary>
+        /// lbSurveySchool control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbSurveySchool;
+        
+        /// <summary>
+        /// ddlSurveySchool control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSurveySchool;
+        
+        /// <summary>
         /// lbSurveyProgram control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,24 @@ namespace IICPSES {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSurveySubject;
+        
+        /// <summary>
+        /// lbSurveyLecturer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbSurveyLecturer;
+        
+        /// <summary>
+        /// ddlSurveyLecturer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSurveyLecturer;
         
         /// <summary>
         /// lbSurveySemester control.

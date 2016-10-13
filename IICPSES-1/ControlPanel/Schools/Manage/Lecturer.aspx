@@ -10,7 +10,7 @@
             <asp:DropDownList runat="server" ID="ddlSchool" CssClass="form-control"></asp:DropDownList>
 
             <asp:Label Text="Lecturer" CssClass="label label-info" runat="server" />
-            <asp:CheckBoxList runat="server" ID="cblLecturers" CssClass="form-control"></asp:CheckBoxList>
+            <asp:CheckBoxList runat="server" ID="cblLecturers"></asp:CheckBoxList>
 
             <p>Click <strong>Associate</strong> to start associating the selected lecturers to the selected school.</p>
             <asp:Button Text="Associate" runat="server" ID="btnAssociateSchoolLecturers" CssClass="btn btn-primary" OnClick="btnAssociateSchoolLecturers_Click" />

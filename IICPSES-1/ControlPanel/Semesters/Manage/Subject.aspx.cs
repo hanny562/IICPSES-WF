@@ -24,8 +24,7 @@ namespace IICPSES.ControlPanel.Semesters.Manage
             if (!IsPostBack)
             {
                 BindDropDownList_Semester();
-                BindDropDownList_ProgramSubject();
-                BindDropDownList_Lecturer();
+                BindDropDownList_SchoolLecturer();
             }
         }
 
@@ -47,44 +46,116 @@ namespace IICPSES.ControlPanel.Semesters.Manage
             }
         }
 
-        private void BindDropDownList_ProgramSubject()
+
+        private void BindDropDownList_SchoolLecturer()
         {
+            string sql = "select sl.Id, s.Code, l.Name, Concat(s.Code, ' - ', l.Name) as Display from [dbo].[SchoolLecturer] sl inner join [dbo].[School] s on sl.SchoolId=s.Id inner join [dbo].[Lecturer] l on sl.LecturerId = l.Id";
             using (var conn = new SqlConnection(Shared.GetConnectionString()))
             {
                 conn.Open();
 
-                string sql = "select ps.Id, p.Code as ProgramCode, s.Code as SubjectCode, Concat(p.Code, ' - ', s.Code) as Display from [dbo].[ProgramSubject] ps inner join [dbo].[Subject] s on ps.SubjectId = s.Id inner join [dbo].[Program] p on ps.ProgramId = p.Id";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
-                    ddlProgramSubject.DataSource = cmd.ExecuteReader();
+                    ddlSchoolLecturers.DataSource = cmd.ExecuteReader();
+                    ddlSchoolLecturers.DataTextField = "Display";
+                    ddlSchoolLecturers.DataValueField = "Id";
+                    ddlSchoolLecturers.DataBind();
+                }
+            }
+        }
 
+        private void BindDropDownList_ProgramSubjects(int schoolLecturerId)
+        {
+            string sql = "select ps.Id, p.Code, s.Code, Concat(p.Code, ' - ', s.Code) as Display from [dbo].[ProgramSubject] ps inner join [dbo].[Program] p on ps.ProgramId = p.Id inner join [dbo].[Subject] s on ps.SubjectId = s.Id where ps.Id = @id";
+            using (var conn = new SqlConnection(Shared.GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", schoolLecturerId);
+
+                    ddlProgramSubject.DataSource = cmd.ExecuteReader();
                     ddlProgramSubject.DataTextField = "Display";
                     ddlProgramSubject.DataValueField = "Id";
-
                     ddlProgramSubject.DataBind();
                 }
             }
         }
 
-        private void BindDropDownList_Lecturer()
-        {
-            ddlLecturer.DataSource = Role.Lecturer.GetAllLecturers();
-            ddlLecturer.DataTextField = "Name";
-            ddlLecturer.DataValueField = "Id";
-            ddlLecturer.DataBind();
-        }
-
         protected void btnCreateSemesterSubject_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(ddlSemester.SelectedValue) || string.IsNullOrWhiteSpace(ddlProgramSubject.SelectedValue) || string.IsNullOrWhiteSpace(ddlLecturer.SelectedValue))
+            if (string.IsNullOrEmpty(ddlProgramSubject.SelectedValue) || string.IsNullOrEmpty(ddlSchoolLecturers.SelectedValue) || string.IsNullOrEmpty(ddlSemester.SelectedValue))
             {
-                lblSemesterSubject_Status.Text = "has empty";
+                lblSemesterSubject_Status.CssClass = "text-danger";
+                lblSemesterSubject_Status.Text = "Please select all options before begin associating.";
+
             }
             else
             {
-                Semester.AssociateSemesterSubject(Convert.ToInt32(ddlSemester.SelectedValue), Convert.ToInt32(ddlProgramSubject.SelectedValue), Convert.ToInt32(ddlLecturer.SelectedValue));
-                lblSemesterSubject_Status.Text = "Semester subject association has been created successfully.";
+                int schoolLecturerProgramSubjectId = -1;
+
+                // gets the SchoolLecturerProgramSubject ID
+                string sql = "select Id from [dbo].[SchoolLecturerProgramSubject] where SchoolLecturerID=@slid and ProgramSubjectID=@psid";
+                using (var conn = new SqlConnection(Shared.GetConnectionString()))
+                {
+                    conn.Open();
+
+                    using (var cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@slid", ddlSchoolLecturers.SelectedValue);
+                        cmd.Parameters.AddWithValue("@psid", ddlProgramSubject.SelectedValue);
+
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            if (rdr.Read())
+                            {
+                                schoolLecturerProgramSubjectId = Convert.ToInt32(rdr[0].ToString());
+                            }
+                        }
+                    }
+                }
+
+                if (schoolLecturerProgramSubjectId == -1)
+                {
+                    lblSemesterSubject_Status.CssClass = "text-danger";
+                    lblSemesterSubject_Status.Text = "Error associating.";
+                }
+                else
+                {
+                    // insert entry into SemesterSubject table
+                    sql = "insert into [dbo].[SemesterSubject] values (@sid, @slpsid)";
+                    using (var conn = new SqlConnection(Shared.GetConnectionString()))
+                    {
+                        conn.Open();
+
+                        using (var cmd = new SqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@sid", Convert.ToInt32(ddlSemester.SelectedValue));
+                            cmd.Parameters.AddWithValue("@slpsid", schoolLecturerProgramSubjectId);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+
+                    lblSemesterSubject_Status.CssClass = "text-success";
+                    lblSemesterSubject_Status.Text = "OK.";
+                }
             }
+
+        }
+
+        protected void ddlSchoolLecturers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var ddl = sender as DropDownList;
+            BindDropDownList_ProgramSubjects(Convert.ToInt32(ddl.SelectedValue));
+        }
+
+        protected void ddlSchoolLecturers_DataBound(object sender, EventArgs e)
+        {
+            var ddl = sender as DropDownList;
+            BindDropDownList_ProgramSubjects(Convert.ToInt32(ddl.SelectedValue));
         }
     }
 }

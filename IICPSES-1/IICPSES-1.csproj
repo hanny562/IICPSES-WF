@@ -135,6 +135,7 @@
     <Content Include="ControlPanel\Schools\Create.aspx" />
     <Content Include="ControlPanel\Schools\Index.aspx" />
     <Content Include="ControlPanel\Schools\Manage\Lecturer.aspx" />
+    <Content Include="ControlPanel\Schools\Manage\SchoolLecturer.aspx" />
     <Content Include="ControlPanel\Semesters\Create.aspx" />
     <Content Include="ControlPanel\Semesters\Index.aspx" />
     <Content Include="ControlPanel\Semesters\Manage\Subject.aspx" />
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="ControlPanel\Schools\Manage\Lecturer.aspx.designer.cs">
       <DependentUpon>Lecturer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\Schools\Manage\SchoolLecturer.aspx.cs">
+      <DependentUpon>SchoolLecturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\Schools\Manage\SchoolLecturer.aspx.designer.cs">
+      <DependentUpon>SchoolLecturer.aspx</DependentUpon>
     </Compile>
     <Compile Include="ControlPanel\Semesters\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
