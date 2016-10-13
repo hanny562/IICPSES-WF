@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IICPSES.ControlPanel.Semesters.Manage {
+namespace IICPSES_1.ControlPanel.Schools.Manage {
     
     
-    public partial class Subject {
-        
-        /// <summary>
-        /// ddlSemester control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSemester;
+    public partial class SchoolLecturer {
         
         /// <summary>
         /// ddlSchoolLecturers control.
@@ -31,30 +22,30 @@ namespace IICPSES.ControlPanel.Semesters.Manage {
         protected global::System.Web.UI.WebControls.DropDownList ddlSchoolLecturers;
         
         /// <summary>
-        /// ddlProgramSubject control.
+        /// cblProgramSubjects control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProgramSubject;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblProgramSubjects;
         
         /// <summary>
-        /// lblSemesterSubject_Status control.
+        /// lblSchoolLecturerProgramSubject_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSemesterSubject_Status;
+        protected global::System.Web.UI.WebControls.Label lblSchoolLecturerProgramSubject_Status;
         
         /// <summary>
-        /// btnCreateSemesterSubject control.
+        /// btnAssociate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateSemesterSubject;
+        protected global::System.Web.UI.WebControls.Button btnAssociate;
     }
 }

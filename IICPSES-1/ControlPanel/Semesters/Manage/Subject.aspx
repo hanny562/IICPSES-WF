@@ -12,16 +12,21 @@
             <asp:Label Text="Semester" CssClass="label label-info" runat="server" />
             <asp:DropDownList runat="server" ID="ddlSemester" CssClass="form-control"></asp:DropDownList>
 
-            <asp:Label Text="Program Subject Associations" CssClass="label label-info" runat="server" />
-            <asp:DropDownList runat="server" ID="ddlProgramSubject" CssClass="form-control"></asp:DropDownList>
+            <asp:Label Text="School Lecturer" CssClass="label label-info" runat="server" />
+            <asp:DropDownList runat="server" ID="ddlSchoolLecturers" CssClass="form-control"
+                OnSelectedIndexChanged="ddlSchoolLecturers_SelectedIndexChanged" OnDataBound="ddlSchoolLecturers_DataBound" 
+                AutoPostBack="true">
+            </asp:DropDownList>
 
-            <asp:Label Text="Lecturer" CssClass="label label-info" runat="server" />
-            <asp:DropDownList runat="server" ID="ddlLecturer" CssClass="form-control"></asp:DropDownList>
+            <asp:Label Text="Program Subject" CssClass="label label-info" runat="server" />
+            <asp:DropDownList runat="server" ID="ddlProgramSubject" CssClass="form-control"></asp:DropDownList>
 
             <p>Create <strong>Associate</strong> to create the survey profile based on settings above.</p>
 
+            <p><asp:Label runat="server" ID="lblSemesterSubject_Status" /></p>
+
             <asp:Button Text="Create" runat="server" ID="btnCreateSemesterSubject" CssClass="btn btn-primary" OnClick="btnCreateSemesterSubject_Click" />
-            <asp:Label runat="server" ID="lblSemesterSubject_Status" />
+            
         </div>
     </div>
 
